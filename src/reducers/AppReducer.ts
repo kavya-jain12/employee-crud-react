@@ -1,4 +1,6 @@
-export default (state, action) => {
+import { EmployeeTypes } from "../types/employee";
+
+export default (state: { employees: EmployeeTypes[]; }, action: { type: string; payload: any; }) => {
     switch (action.type) {
         case 'REMOVE_EMPLOYEE':
             return {
